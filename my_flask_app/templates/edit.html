@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for( 'static', filename='style_edit.css' ) }}">
+{% endblock %}
+
+{% block title %} Edit Note {% endblock %}
+
+{% block body %}
+    <div class="back-btn">
+        <a href="/back">Back</a>
+    </div>
+    <h1>Edit Note</h1>
+    <form method="POST"  >
+        <input type="text" name="message" value="{{ note[2] }}"> <br> <br>
+        <button type="submit" class="update-btn">Update</button>
+    </form>
+
+
+{% endblock %}
